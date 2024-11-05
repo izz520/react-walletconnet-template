@@ -15,8 +15,12 @@
     "@reown/appkit-adapter-wagmi": "^1.2.1",
     "@tanstack/react-query": "^5.59.19",
     "framer-motion": "^11.11.11",
+    "i18next": "^23.16.4",
+    "i18next-browser-languagedetector": "^8.0.0",
+    "i18next-http-backend": "^2.6.2",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-i18next": "^15.1.0",
     "viem": "^2.21.40",
     "wagmi": "^2.12.25",
     "zustand": "^5.0.1"
