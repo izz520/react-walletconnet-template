@@ -1,6 +1,7 @@
 import { createAppKit } from '@reown/appkit/react'
 import { arbitrum, mainnet } from '@reown/appkit/networks'
 import { WagmiAdapter } from '@reown/appkit-adapter-wagmi'
+import { algenL2Test } from './algen2'
 
 
 // 1. Get projectId from https://cloud.reown.com
@@ -15,7 +16,7 @@ const metadata = {
 }
 
 // 3. Set the networks
-const networks = [mainnet, arbitrum]
+const networks = [arbitrum, mainnet, algenL2Test]
 
 // 4. Create Wagmi Adapter
 export const wagmiAdapter = new WagmiAdapter({
@@ -27,7 +28,8 @@ export const wagmiAdapter = new WagmiAdapter({
 // 5. Create modal
 createAppKit({
   adapters: [wagmiAdapter],
-  networks: [mainnet, arbitrum],
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  networks: networks as any,
   projectId,
   metadata,
   enableWalletConnect: false,
